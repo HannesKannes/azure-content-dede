@@ -481,7 +481,7 @@ Eine letzte Sache bleibt noch zu tun, nämlich das Hinzufügen der Möglichkeit,
 			}
 			catch (DocumentClientException e)
 			{
-				if (e.StatusCode == HttpStatusCode.NotFound)
+				if (e.StatusCode == System.Net.HttpStatusCode.NotFound) //System.Net. was missing
 				{
 					return null;
 				}
